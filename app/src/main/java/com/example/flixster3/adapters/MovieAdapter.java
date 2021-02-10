@@ -2,6 +2,7 @@ package com.example.flixster3.adapters;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,9 +12,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster3.R;
 import com.example.flixster3.models.Movie;
 
@@ -76,7 +79,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             } else{
                 imageUrl=movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+
+            //Drawable placeholder = AppCompatResources.getDrawable(context,R.drawable.loading);
+
+            Glide.with(context)
+                    .load(imageUrl)
+                    .placeholder(R.drawable.loading2)
+                    .error(R.drawable.loading2)
+                    .into(ivPoster);
+
+
+            //Glide.with(context).load(imageUrl).into(ivPoster);
         }
     }
 }
