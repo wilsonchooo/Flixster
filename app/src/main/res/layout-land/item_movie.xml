@@ -34,7 +34,7 @@
         tools:text="It is a spin-off of the Fast Furious franchise set after the events of 2017's The Fate of the Furious." />
 
     <ImageView
-        android:id="@+id/playable"
+        android:id="@+id/Playable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/ivPoster"

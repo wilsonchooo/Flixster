@@ -93,6 +93,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             } else{
                 imageUrl=movie.getPosterPath();
             }
+
             if(movie.getRating()>5)
             {
                 playable.setVisibility(View.VISIBLE);
@@ -100,6 +101,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             else if (movie.getRating()<=5){
                 playable.setVisibility(View.INVISIBLE);
             }
+
+
             //Drawable placeholder = AppCompatResources.getDrawable(context,R.drawable.loading);
 
             int radius=10;
