@@ -18,7 +18,7 @@
 - [x] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### App Walkthough GIF
-<img src="week2.gif" width=250><br>
+<img src="Week 3.gif" width=250><br>
 
 ### Notes
 
